@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+
+
+    <title>CSS width, height, and overflow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+       
+
+        .row{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+        }
+
+        .sidenav {
+    height: 100%;
+    width: 160px;
+    margin-top:35px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0c7cb3;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #818181;
+    display: block;
+    border-bottom: 0.5px solid grey;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.btn {
+    background-color: #0c7cb3;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+
+
+
+
+
+     </style>
+    
+
+    
+</head>
+<body>
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Equipshare</a>
+    </div>
+        
+    <ul class="nav navbar-nav navbar-right">
+      <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="margin-right: 5px;" class="glyphicon glyphicon-user"></span>William Stryker</a>
+            <ul class="dropdown-menu">
+          <li><a style="border-bottom: 1px solid grey" href="#">Manage Profile</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sidenav">
+  <a href="dashboard.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-info-sign"></span>Dashboard</a>
+  <a href="location.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-map-marker"></span>Location</a>
+  <a href="companies.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-th-list"></span>Companies</a>
+  <a href="equipment master.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-info-sign"></span>Equipment Master</a>
+  <a href="equipment categories.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-th-list"></span>Equipment Categories</a>
+  <a href="#agent.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-user"></span>Agent</a>
+  <a href="#wallet.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-piggy-bank"></span>Wallet</a>
+  <a href="#rental request.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-list-alt"></span>Rental Request</a>
+  <a href="reports.html"><span style="margin-right: 3px;" class="glyphicon glyphicon-list-alt"></span>Reports</a>
+</div>
+
+<div style="text-align: right; margin-top: 100px">
+    <button class="btn"><span class="glyphicon glyphicon-info-sign"></span></button><br>
+    <button class="btn"><span class="glyphicon glyphicon-bell"></span></button><br>
+    <button class="btn"><span class="glyphicon glyphicon-map-marker"></span></button><br>
+    <button class="btn"><span class="glyphicon glyphicon-time"></span></button><br>
+   
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,413 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+
+
+    <title>CSS width, height, and overflow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+
+      body{
+          overflow-x: hidden;
+          overflow-y: scroll;
+          background-color: #eef1f6;
+        }
+
+         ::-webkit-scrollbar {
+            display: none;
+            }
+
+      .row{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+                    }
+
+*{  margin: 0px;
+    padding: 0px;
+
+}
+        .sidenav {
+    height: 100%;
+    width: 170px;
+    margin-top:35px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 20px; 
+    border-right: 1px solid #eef1f6;
+}
+
+.sidenav ul li {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #2f323e;
+    display: block;
+    border-bottom: 1px solid #eef1f6;
+    cursor: pointer;
+}
+
+.sidenav ul ul li{
+   background: white;
+  border-bottom: 0.5px dotted grey;
+  color: #2f323e;
+  }
+
+.sidenav ul ul{display: none;}
+.sidenav ul li:hover>ul{display: block;
+
+}
+
+.sidenav ul li :hover {
+    color: #0c7cb3;
+}
+
+.sidenav ul li a {
+    color: #2f323e;
+}
+
+.btn {
+    background-color: #0c7cb3;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+
+ 
+
+.btn1 {
+    background-color: #0c7cb3;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 6px 18px;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+  }
+
+  .checkbox-inline{
+    padding: 10px;
+  }
+
+
+
+
+
+
+     </style>
+    
+
+    
+</head>
+<body>
+       <nav class="navbar navbar-inverse navbar-fixed-top" style="border-bottom: 1px solid #eef1f6;">
+  <div style="background-color:#cccccc;"  class="container-fluid">
+    <div  class="navbar-header">
+      <a class="navbar-brand" href="homepage.html"><img style="width: 140px;margin-top: -5px;" class="logo" src="../LOGO2.png"></a>
+    </div>
+        
+    <ul class="nav navbar-nav navbar-right">
+      <li><a style="color: white;font-size: 16px;background-color: #cccccc; " class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="margin-right: 5px;" class="glyphicon glyphicon-user"></span>William Stryker</a>
+            <ul class="dropdown-menu">
+          <li><a style="border-bottom: 1px solid grey" href="admin_profile.html">Manage Profile</a></li>
+          <li><a href="page1.html">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sidenav">
+  <ul>
+
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-th-list"></span>Companies
+      <ul>
+        <li>Rental Contractor</li>
+        <li>OEM Banks</li>    
+        <li>Suppliers</li> 
+        <li>Mechanics</li> 
+      </ul>
+  </li>
+
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-info-sign"></span>Equipment Master
+      <ul>
+        <li>Category</li>
+        <li>Subcategory</li>
+        <li><a href="view equipment.html">Equipment</a></li>       
+      </ul>
+  </li>
+
+   <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-map-marker"></span>AMS
+      <ul>
+        <li>Activate Client</li>
+        <li>Map View</li>
+       </ul>
+  </li>
+
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-list-alt"></span>Rental
+      <ul>
+        <li>View Request</li>
+        <li>View Confirmation</li>      
+      </ul>
+  </li>
+
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-th-list"></span>Auctions
+        <ul>
+        <li>Creat </li>
+        <li>Results</li>
+        <li>Defaulters</li>       
+      </ul>
+  </li>  
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-user"></span>New Equipment</li>
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-user"></span>E-Commerce</li>
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-user"></span>SMS</li>
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-piggy-bank"></span>Call Off</li>
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-list-alt"></span>Pooling</li>
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-list-alt"></span>Reports</li>
+  <li style="font-size: 14px;"><span style="margin-right: 6px;" class="glyphicon glyphicon-list-alt"></span>Wallet</li>
+</ul>
+</div>
+
+<div style="text-align: right; margin-top: 150px">
+    <button class="btn"><span class="glyphicon glyphicon-info-sign"></span></button><br>
+    <button class="btn"><span class="glyphicon glyphicon-bell"></span></button><br>
+    <button class="btn"><span class="glyphicon glyphicon-map-marker"></span></button><br>
+    <button class="btn"><span class="glyphicon glyphicon-time"></span></button><br>
+   
+</div>
+
+
+
+    </body>
+</html>
+
+
+<div class="container-fluid" >
+  
+  <div class="row" style="margin-top:50px; margin-left: 180px; margin-right: 10px">
+    <h4 class="head" style="border-bottom:0.5px solid #333333; padding-bottom: 5px; "><strong>Add Company</strong></h4>
+      
+        <div style="margin-top: 5px;" class="col-md-6">
+          <div>
+           <div style="margin-bottom: 10px; margin-left:-10px;"> <button class="btn1" style=" background-color: #0c7cb3;border-radius: 3px;border: none;color: white;padding: 3px 6px">Cancel</button><br>
+           </div>
+         </div>
+        </div>
+
+        <div style="margin-top: 5px" class="col-md-6">
+          <div>
+          <div style="text-align: right;margin-right: 50px;margin-bottom: 10px;">  <button class="btn1" style=" background-color: #0c7cb3;border-radius: 3px;border: none;color: white;padding: 3px 6px">Add/Done</button><br>
+          </div>
+          </div>
+            
+        </div>
+
+  </div>
+
+  
+  <div style="margin-top: 140px; margin-left: 180px ; border: 1px solid grey;width: 83.5%;padding: 10px;border-radius: 6px;background-color:white;" class="row">
+      <h4 style="margin-top: -3px">Basic Info:</h4>
+
+      <div class="col-md-6">
+        <form action="/action_page.php">
+            Company Name:
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:325px;margin-left: 33px">
+            
+              <br><br>
+
+        <form>
+            Company Type:
+              <label style="margin-left: 40px" class="radio-inline">
+                <input type="radio" name="optradio" checked>Pvt. Ltd.
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">Public
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">Proprietorship
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio">Partnership
+              </label>
+        </form>
+            <br><br>
+        
+
+
+           
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <form action="/action_page.php">
+            Company Number:
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px;margin-left: 70px"> <br><br>
+
+            Company Logo: <input style="color: #0c7cb3; margin-left: 120px;margin-top: -20px;" type="file" name="myFile">
+              <input style="background-color: #0c7cb3; color: white; margin-top: 10px;padding: 3px 6px" type="submit">
+            
+              <br><br>
+
+
+           
+        </form>
+      </div>
+
+        <form style="margin-left:15px">
+            Company role:
+          <label style="margin-left: 55px" class="checkbox-inline">
+            <input type="checkbox" value="">Contractor
+          </label> 
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Rental
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Bank
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">OEM
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Service
+          </label> 
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Spare Parts
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Accessories
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox" value="">Auxillories
+          </label>
+        </form>
+
+  </div>
+
+
+
+  <div style="margin-top: 360px; margin-left: 180px ; border: 1px solid grey;width: 83.5%;padding: 10px;border-radius: 6px;background-color:white; padding-bottom: 15px;" class="row">
+      <h4 style="margin-top: -3px">Company Address:</h4>
+
+      <div class="col-md-12">
+        <form  action="/action_page.php">
+            Address:
+              <input type="text" placeholder="" name="" style="border: 1px solid grey; border-radius: 3px;margin-left: 70px;width: 80%"> <br><br>
+              <input type="text" placeholder="City" name="" style="border: 1px solid grey; border-radius: 3px;margin-left: 130px">
+              <input type="text" placeholder="State" name="" style="border: 1px solid grey; border-radius: 3px;margin-left: 70px">
+              <input type="text" placeholder="Pin" name="" style="border: 1px solid grey; border-radius: 3px;margin-left: 70px">
+
+        </form>
+      </div>
+
+      
+
+      
+
+      
+
+  </div>
+
+   <div style="margin-top: 490px; margin-left: 180px ; border: 1px solid grey;width: 83.5%;padding: 10px;border-radius: 6px;background-color:white; padding-bottom: 5px;" class="row">
+      <h4 style="margin-top: -3px">SuperUser Information:</h4>
+
+      <div class="col-md-6">
+        <form action="/action_page.php">
+            Name:
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:325px;margin-left: 97px">
+            
+              <br><br>
+            Contact Number:
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:325px;margin-left: 33px">
+            
+              <br><br>
+
+
+           
+        </form>
+      </div>
+
+      <div class="col-md-6">
+         <form action="/action_page.php">
+            Email Id.:
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:325px;margin-left: 55px">
+            
+              <br><br>
+            Designation:
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:325px;margin-left: 33px">
+            
+              <br><br>
+
+
+           
+        </form>
+      </div>
+
+      <div style="margin-top: 630px; margin-left: 180px ; border: 1px solid grey;width: 83.5%;padding: 10px;border-radius: 6px;background-color:white; padding-bottom: 15px;" class="row">
+      <h4 style="margin-top: -3px">Commercial Details:</h4>
+
+      <div class="col-md-4">
+        <form action="/action_page.php">
+            GST No. :
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:275px;margin-left: 27px">
+            
+              <br><br>
+            TIN No. :
+              <input type="text" name="" style="border: 1px solid grey; border-radius: 3px; width:275px;margin-left: 33px">
+            
+              <br><br>
+
+
+           
+        </form>
+      </div>
+
+      <div class="col-md-4">
+         <form action="/action_page.php">
+           Contract Details: <input style="color: #0c7cb3; margin-left: 120px;margin-top: -20px;" type="file" name="myFile">
+              <input style="background-color: #0c7cb3; color: white; margin-top: 10px; padding: 3px 6px" type="submit">
+          </form>
+      </div>
+
+       <div class="col-md-4">
+         <form action="/action_page.php">
+           Contract Details: <input style="color: #0c7cb3; margin-left: 120px;margin-top: -20px;" type="file" name="myFile">
+              <input style="background-color: #0c7cb3; color: white; margin-top: 10px; padding: 3px 6px" type="submit">
+          </form>
+      </div>
+
+      
+
+      
+
+
+      
+
+      
+
+      
+
+  </div>
+
+
+
+</div>
+
+
+    </body>
+</html>
