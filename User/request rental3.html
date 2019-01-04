@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+
+
+
+    <title>CSS width, height, and overflow</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+
+       
+
+        .row{
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+                    }
+
+*{  margin: 0px;
+    padding: 0px;
+
+}
+        .sidenav {
+    height: 100%;
+    width: 160px;
+    margin-top:35px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0c7cb3;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav ul li {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    display: block;
+    border-bottom: 1px solid white;
+}
+
+.sidenav ul ul li{
+  background: #2f323e;
+  border-bottom: 0.5px dotted grey;
+  }
+
+.sidenav ul ul{display: none;}
+.sidenav ul li:hover>ul{display: block;
+
+}
+
+.sidenav ul li:hover {
+    color: #cccccc;
+}
+.btn {
+    background-color: #0c7cb3;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    width: 100px;
+    margin-right: 5px;
+
+
+
+
+
+  .checkbox-inline{
+    padding: 10px;
+  }
+
+
+
+
+
+
+     </style>
+    
+
+    
+</head>
+<body>
+       <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div style="background-color:#0c7cb3;"  class="container-fluid">
+    <div  class="navbar-header">
+      <a style="color: white" class="navbar-brand" href="#">Equipshare</a>
+    </div>
+        
+    <ul class="nav navbar-nav navbar-right">
+      
+      <li><button style="color: white ; background-color: #0c7cb3; border:1px solid white; padding-left: 5px;margin-top: 12px; padding-top: 3px; margin-right: 40px" class="dropdown-toggle" data-toggle="dropdown" >
+        <span style="margin-right: 5px; color: white;" class="glyphicon glyphicon-th-large"></span>
+          </button>
+
+            <ul class="dropdown-menu" style="width: 550px;text-align: center;background-color: #eef1f6">
+          <li><button style="margin-left: 5px" class="btn"><span class="glyphicon glyphicon-info-sign"></span><br>Auction</button>
+              <button class="btn"><span class="glyphicon glyphicon-info-sign"></span><br>Buy & Sells</button>
+              <button class="btn"><span class="glyphicon glyphicon-info-sign"></span><br>E-Commerce</button>
+              <button class="btn"><span class="glyphicon glyphicon-info-sign"></span><br>SMS</button>
+              <button class="btn"><span class="glyphicon glyphicon-info-sign"></span><br>Call Off</button>
+          </li>
+          
+            </ul>
+      </li>
+
+      <li><a style="color: white" class="dropdown-toggle" data-toggle="dropdown" href="#"><span style="margin-right: 5px; color: white" class="glyphicon glyphicon-user"></span>William Stryker</a>
+            <ul class="dropdown-menu">
+          <li><a style="border-bottom: 1px solid grey" href="#">Manage Profile</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="sidenav">
+  <ul>
+
+  <li><span style="margin-right: 3px;" class="glyphicon glyphicon-th-list"></span>Companies
+      <ul>
+        <li>Rental Contractor</li>
+        <li>OEM Banks</li>    
+        <li>Suppliers</li> 
+        <li>Mechanics</li> 
+      </ul>
+  </li>
+
+  <li><span style="margin-right: 3px;" class="glyphicon glyphicon-info-sign"></span>Site
+      <ul>
+        <li>View</li>
+        <li>create</li>      
+      </ul>
+  </li>
+
+   <li><span style="margin-right: 3px;" class="glyphicon glyphicon-map-marker"></span>Equipment
+      <ul>
+        <li>View</li>
+        <li>Create</li>
+       </ul>
+  </li>
+
+  <li><span style="margin-right: 3px;" class="glyphicon glyphicon-list-alt"></span>User
+      <ul>
+        <li>View</li>
+        <li>Create</li>      
+      </ul>
+  </li>
+
+  <li><span style="margin-right: 3px;" class="glyphicon glyphicon-th-list"></span>Rental Request
+        <ul>
+        <li>Request </li>
+        <li>Confirmation</li>      
+        </ul>
+  </li>  
+  <li><span style="margin-right: 3px;" class="glyphicon glyphicon-user"></span>Invoice</li>
+  
+</ul>
+</div>
+
+
+
+<div class="container-fluid" >
+  
+  <div class="row" style="margin-top:60px; margin-left: 180px; margin-right: 10px;">
+    <h4 class="head" style="border-bottom:0.5px solid #333333; padding-bottom: 5px; "><strong>Rent Now</strong></h4>
+
+        <div style="margin-top: 10px; text-align: left;" class="col-md-4">
+
+            <form action="/action_page.php">
+           Select Project:
+              <div class="form-group">
+                  <select style="width: 225px;height: 27px; margin-top: -25px; margin-left: 100px" class="form-control" id="sel1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select>
+              </div>
+            </form>
+            
+        </div>
+
+
+         <div style="margin-top: 10px; text-align: left;" class="col-md-3">
+                <form action="/action_page.php">
+            City:
+              <div class="form-group">
+                  <select style="width: 225px;height: 27px; margin-top: -25px; margin-left: 40px" class="form-control" id="sel1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  </select>
+              </div>
+            </form>
+
+          </div>
+
+          <div style="margin-top: 5px; text-align: left;" class="col-md-3">
+            <div>
+           <div style="margin-bottom: 10px; "> <button class="btn1" style="background-color:#0c7cb3;border-radius: 3px;border: none;color: white;padding: 5px 10px;">Get Details</button><br>
+           </div>
+          </div>
+           
+
+
+  </div>
+
+  <div class="row" style="margin-top:160px; margin-left: 180px; margin-right: 10px;">
+    <h5 class="head" style="border-bottom:0.5px dashed #333333; padding-bottom: 5px; "> Category Name<strong> &nbsp Subcategory</strong></h5>
+
+
+
+   
+
+  
+  
+
+
+ 
+
+
+</div>
+
+
+    </body>
+</html>
