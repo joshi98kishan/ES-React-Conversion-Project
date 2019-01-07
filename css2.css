@@ -1,0 +1,86 @@
+/*css2*/
+
+body {
+            background: #ffffff;
+            overflow: hidden;
+
+
+        }
+
+     .logo{
+            
+            border-right: 0.1px solid #2f323e;
+            border-spacing: 500px;
+            margin-top: 180px;
+            
+
+
+            
+        }
+
+        .login{
+            width: 700px;
+            margin-top: 260px;
+            margin-left: 60px;
+            color: #2f323e;
+           
+
+            
+
+        }
+
+        .login h1 {
+            font-size: 30px;
+
+        }
+
+        .textbox{
+            width: 1000px;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 1px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .textbox input{
+            font-size: 15px;
+             width: 300px;
+            height: 25px;
+            border: 1px solid #2f323e;
+            padding-left: 5px;
+            background-color: transparent;
+
+        }
+
+        .btn{
+            width: 43%;
+            border: 1px solid #2f323e;
+            background-color: #0c7cb3;
+            color: white;
+            font-size: 14px;
+            margin-top: 3px;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        .footer{
+            margin-top: 60px;
+            margin-right: 20px;
+            margin-left: 20px;
+            border-top: 1px solid #2f323e;
+            text-align: center;   
+        }
+
+        .rem{
+            
+            font-size: 14px;
+            font-color:#2f323e;
+        }
+
+        .fog{
+            
+            margin-left: 95px;
+            font-size: 14px;
+            font-color:#2f323e;
+        }
